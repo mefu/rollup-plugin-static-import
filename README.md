@@ -38,12 +38,21 @@ With this output, you can let the application bundler handle scss and svg files.
 
 ## Parameters
 
+### `projectRoot` (default: `process.cwd()`)
+This will be used to create absolute paths out of `include`, `exclude` and
+`baseDir` parameters. Mostly, `rollup` is run in project root folder, so default
+value of `process.cwd()` works fine and you do not have to think about this at
+all. But for some reason, if you are running `rollup` command from a different
+folder than project root, you should set this to an absolute path pointing to
+root folder of project (where `package.json` is located). If you use absolute
+paths for all other parameters, this parameter will not have any effect.
+
 ### `include`* and `exclude` (default: `[]`)
 `include` and `exclude` are parameters that are used in almost every rollup
 plugin and functions in the same way. For this plugin, `include` is a required
 parameter.
 
-### baseDir (default: `'src'`)
+### `baseDir` (default: `'src'`)
 Base directory that will be used to determine path of copied files. For example
 `src/styles/main.scss` with `baseDir: 'src'` will be copied to
 `<outputDir>/styles/main.scss`.
