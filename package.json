@@ -1,7 +1,7 @@
 {
   "name": "rollup-plugin-static-import",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/mefu/rollup-plugin-static-import.git"
