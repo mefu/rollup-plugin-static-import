@@ -1,0 +1,27 @@
+{
+  "name": "rollup-plugin-static-import",
+  "license": "MIT",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mefu/rollup-plugin-static-import.git"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "@rollup/pluginutils": "4.0.0",
+    "glob": "7.1.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.4",
+    "@babel/preset-env": "7.11.0"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "start": "babel src -d lib -w"
+  }
+}
