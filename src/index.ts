@@ -42,7 +42,7 @@ const staticImport: PluginImpl<RollupStaticImportPluginOptions> = options => {
     },
     buildStart() {
       // emit matching files and add them to watch list at the start of build
-      absoluteIncludes.flatMap(inc => glob.sync(inc)).forEach(id => {
+      absoluteIncludes.flatMap(inc => glob.sync(inc.split(path.sep).join('/'))).forEach(id => {
         this.emitFile({
           type: 'asset',
           source: fs.readFileSync(id),
