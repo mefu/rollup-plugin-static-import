@@ -29,5 +29,5 @@ test('staticImport outputs files correctly', async () => {
     'sample.jpg',
     'sub-dir/sample.jpg',
     'sub-dir/sub-sub-dir/sample.jpg'
-  ])
+  ].map(p => path.normalize(p)))
 })
